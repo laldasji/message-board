@@ -1,0 +1,16 @@
+<div class="m-2 p-2
+            flex flex-col
+            border-2 rounded-xl
+            w-[min(900px,calc(100%-3rem))]">
+    <p class="text-xl">
+        <%= message.text %>
+    </p>
+    <p class="text-gray-600 self-end text-sm">
+        <%= message.user %>
+    </p>
+    <p class="self-end text-sm">
+        <%= `Posted: ${message.added.toLocaleString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        })}` %>
+    </p>
+</div>

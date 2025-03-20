@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body class="grid">
+    <div class="sticky top-0 grid place-items-center bg-white">
+        <h1 class="text-4xl text-center
+                 bg-amber-400 text-gray-50
+                   w-full p-3 place-self-center">
+            <%= title %>
+        </h1>
+        <a href="/new" class="bg-amber-300
+                              flex justify-center items-center
+                              w-max p-2 m-2 rounded-md place-self-center
+                              hover:shadow-md hover:shadow-gray-500
+                              duration-250"> Add New Message </a>
+    </div>
+    <div class="grid place-items-center">
+        <% for (let i = messages.length - 1; i >= 0; i--) { %>
+            <%- include('message', { message : messages[i]}) %>
+        <% }; %>
+    </div>
+</body>
+</html>
