@@ -4,79 +4,10 @@ import newMessageRouter from "./routes/newMessageRouter.js";
 
 const messages = [
     {
-        text: 'I was born',
-        user: 'Abhinav',
-        added: new Date(2002, 11, 12)
-    },
-    {
-        text: 'Life happened',
-        user: 'Laldasji',
-        added: new Date(2010, 11, 16)
-    },
-    {
-        text: 'I made this project',
-        user: 'Ashutosh',
-        added: new Date(2025, 2, 19)
-    },
-    {
-        text: 'I was born',
-        user: 'Abhinav',
-        added: new Date(2002, 11, 12)
-    },
-    {
-        text: 'Life happened',
-        user: 'Laldasji',
-        added: new Date(2010, 11, 16)
-    },
-    {
-        text: 'I made this project',
-        user: 'Ashutosh',
-        added: new Date(2025, 2, 19)
-    },
-    {
-        text: 'I was born',
-        user: 'Abhinav',
-        added: new Date(2002, 11, 12)
-    },
-    {
-        text: 'Life happened',
-        user: 'Laldasji',
-        added: new Date(2010, 11, 16)
-    },
-    {
-        text: 'I made this project',
-        user: 'Ashutosh',
-        added: new Date(2025, 2, 19)
-    },
-    {
-        text: 'I was born',
-        user: 'Abhinav',
-        added: new Date(2002, 11, 12)
-    },
-    {
-        text: 'Life happened',
-        user: 'Laldasji',
-        added: new Date(2010, 11, 16)
-    },
-    {
-        text: 'I made this project',
-        user: 'Ashutosh',
-        added: new Date(2025, 2, 19)
-    },
-    {
-        text: 'I was born',
-        user: 'Abhinav',
-        added: new Date(2002, 11, 12)
-    },
-    {
-        text: 'Life happened',
-        user: 'Laldasji',
-        added: new Date(2010, 11, 16)
-    },
-    {
-        text: 'I made this project',
-        user: 'Ashutosh',
-        added: new Date(2025, 2, 19)
+        text: 'Has it ever occured to you that the hand you wipe your bum with is the hand you\'ve eaten something with at some point in your life? And at this point\
+        you have no idea what you\'d have eaten that had poop particles in it just because you couldn\'t wash your hand properly that ONE time, which, again, you don\'t remember',
+        user: 'Abhinav Ashutosh',
+        added: new Date()
     }
 ]
 
