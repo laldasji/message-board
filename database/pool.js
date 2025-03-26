@@ -11,6 +11,6 @@ export default new Pool({
         port: 24135,
         ssl: {
             rejectUnauthorized: true,
-            ca: process.env.CA_CERTIFICATE
+            ca: process.env.CA_CERTIFICATE.replace(/\\n/g, '\n')
         }
 })
