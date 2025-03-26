@@ -11,6 +11,6 @@ export default new Pool({
         port: 24135,
         ssl: {
             rejectUnauthorized: true,
-            ca: fs.readFileSync(process.env.CA_CERTIFICATE).toString()
+            ca: process.env.CA_CERTIFICATE
         }
 })
