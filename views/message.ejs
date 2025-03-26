@@ -3,14 +3,12 @@
             border-2 rounded-xl
             w-[min(900px,calc(100%-3rem))]">
     <p class="text-xl">
-        <%= message.text %>
+        <%= message.body %>
     </p>
     <p class="text-gray-600 self-end text-sm">
-        <%= message.user %>
+        <%= message.username %>
     </p>
     <p class="self-end text-sm">
-        <%= `Posted: ${message.added.toLocaleString('en-US', {
-            year: 'numeric', month: 'long', day: 'numeric'
-        })}` %>
+        <%= message.added.toLocaleString(undefined, dateOptions);%> UTC
     </p>
 </div>

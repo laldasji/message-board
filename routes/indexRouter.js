@@ -1,31 +1,22 @@
 import { Router } from "express";
+import db from '../database/queries.js';
 
-const indexRouter = (messages) => {
-    const router = Router();
+const indexRouter = Router();
 
-    router.get('/', (req, res) => {
-        res.render('index', {
-            title: messages.length > 3 ? 'Message Board' : 'Mini Message Board',
-            messages: messages
-        });
-    })
-
-    router.get('/id/:index', (req, res) => {
-        const { index } = req.params;
-        if (index >= messages.length || index < 0) {
-            res.render('index', {
-                title: `Message id out of range!`,
-                messages: []
-            });
-        } else {
-            res.render('index', {
-                title: `Message id \{${index}\}`,
-                messages: [messages[index]]
-            });
+indexRouter.get('/', async (req, res) => {
+    const messages = await db.getAllMessages();
+    res.render('index', {
+        title: 'Mini Message Board',
+        messages: messages,
+        dateOptions: { 
+            minute: '2-digit',
+            hour: '2-digit',
+            day: 'numeric', 
+            month: 'long', 
+            year: 'numeric',
         }
-    })
+    });
+})
 
-    return router;
-}
 
 export default indexRouter;

@@ -10,11 +10,11 @@
     <form class="p-10 w-full" method="post" action="/new">
         <div class="flex flex-row p-2">
             <label for="textInput" class="p-1">Message : </label>
-            <textarea type="text" id="textInput" name="text" placeholder="enter message text" class="min-w-80 min-h-10 h-3/4 focus:outline-none border-b-2 border-r-2"></textarea>
+            <textarea type="text" id="textInput" name="body" placeholder="enter message text" class="min-w-80 min-h-10 h-3/4 focus:outline-none border-b-2 border-r-2"></textarea>
         </div>
         <div class="flex p-2">
             <label for="userInput" class="p-1">User : </label>
-            <input type="text" id="userInput" name="user" placeholder="enter your name" class="focus:outline-none border-b-2 h-full self-center">
+            <input type="text" id="userInput" name="username" placeholder="enter your name" class="focus:outline-none border-b-2 h-full self-center">
         </div>
         <div class="p-2 flex flex-row">
             <input class="bg-amber-300
@@ -30,5 +30,12 @@
             duration-250" href="/"> Go Back </a>
         </div>
     </form>
+    <% if (errors) { %>
+        <ul class="m-2 w-[calc(100vw_-_3rem)]">
+            <% errors.forEach(error => { %>
+                <li class="bg-red-300 w-max p-1.5 m-1.5"><%= error.msg %></li>
+            <% }); %>
+        </ul>
+    <% } %>
 </body>
 </html>
