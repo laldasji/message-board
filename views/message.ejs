@@ -1,7 +1,9 @@
 <div class="m-2 p-2
             flex flex-col
             border-2 rounded-xl
+            relative
             w-[min(900px,calc(100%-3rem))]">
+    <span class="absolute bottom-2 left-2 text-blue-600 underline hover:text-blue-800 cursor-pointer" onclick="setMessageID('<%= message.id %>'); showDeletionPrompt();" >Delete</span>
     <p class="text-xl">
         <%= message.body %>
     </p>

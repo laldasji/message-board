@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import fs from "fs";
 import pkg from "pg";
 const { Pool } = pkg;
 
@@ -11,6 +10,6 @@ export default new Pool({
         port: 24135,
         ssl: {
             rejectUnauthorized: true,
-            ca: process.env.CA_CERTIFICATE.replace(/\\n/g, '\n')
+            ca: process.env.CA_CERTIFICATE
         }
 })

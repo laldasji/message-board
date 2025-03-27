@@ -5,11 +5,18 @@ async function insertMessage(body, username) {
 }
 
 async function getAllMessages() {
-    const { rows } = await pool.query('select * from message_list order by added desc');
+    const { rows } = await pool.query('SELECT * FROM message_list ORDER BY ADDED DESC');
     return rows;
+}
+
+async function deleteMessage(id, password) {
+    if (password = process.env.DB_DELETION_PASSWORD) {
+        await pool.query("DELETE FROM message_list WHERE id = $1", [id]);
+    }
 }
 
 export default {
     insertMessage,
-    getAllMessages
+    getAllMessages,
+    deleteMessage
 }
