@@ -10,7 +10,7 @@ async function getAllMessages() {
 }
 
 async function deleteMessage(id, password) {
-    if (password = process.env.DB_DELETION_PASSWORD) {
+    if (password == process.env.DB_DELETION_PASSWORD) {
         await pool.query("DELETE FROM message_list WHERE id = $1", [id]);
     }
 }
